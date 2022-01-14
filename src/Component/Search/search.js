@@ -1,11 +1,12 @@
 import React from "react";
-import "./search.css"
+import TextInput from "./Input/input";
+import "./search.css";
 
-function Search() {
+function Search({ onclick }) {
   return (
     <div className="search">
-      <input></input>
-      <button>Search</button>
+      <TextInput />
+      <button onClick={onclick}>Search</button>
     </div>
   );
 }
