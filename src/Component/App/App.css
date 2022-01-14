@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.today {
+  font-weight: 700;
+  display: run-in;
+  font-size: 22px;
+}
+.today p {
+  line-height: 0.08;
+}
+
+.forecast {
+}
