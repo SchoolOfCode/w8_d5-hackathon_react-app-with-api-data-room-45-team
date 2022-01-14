@@ -18,7 +18,7 @@ function Results() {
 
   return (
       <div>
-          <h3>I am results.js/Results</h3>
+          <h3>deployed</h3>
           <p>{weather}</p>
       </div>
   );
