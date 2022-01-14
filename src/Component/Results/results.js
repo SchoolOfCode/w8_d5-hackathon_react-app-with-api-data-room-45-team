@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
-// import Forecast from "./Forecast/forecast";
-// import Today from "./Today/today";
+import Forecast from "./Forecast/forecast";
+import Today from "./Today/today";
 
 function Results() {
     const [temp, setTemp] = useState("");
@@ -13,7 +13,6 @@ function Results() {
           "https://goweather.herokuapp.com/weather/London"
         );
         const data = await response.json();
-        console.log(data.forecast[0]);
         setTemp(data.temperature);
         setDesc(data.description);
         setWind(data.wind);
@@ -24,10 +23,8 @@ function Results() {
 
   return (
       <div>
-          <p>{temp}</p>
-          <p>{desc}</p>
-          <p>{wind}</p>
-          <p>{fore}</p>
+          <Today temp={temp} desc={desc} wind={wind}/>
+          <Forecast fore={fore}/>
       </div>
   );
 }
