@@ -3,23 +3,31 @@ import React, {useEffect, useState} from "react";
 // import Today from "./Today/today";
 
 function Results() {
-    const [weather, setWeather] = useState([]);
+    const [temp, setTemp] = useState("");
+    const [desc, setDesc] = useState("");
+    const [wind, setWind] = useState("");
+    const [fore, setFore] = useState([]);
     useEffect(() => {
       async function getWeather() {
         const response = await fetch(
           "https://goweather.herokuapp.com/weather/London"
         );
         const data = await response.json();
-        console.log(data);
-        setWeather(data.temperature);
+        console.log(data.forecast[0]);
+        setTemp(data.temperature);
+        setDesc(data.description);
+        setWind(data.wind);
+        setFore(data.forecast);
       }
       getWeather();
     },  []);
 
   return (
       <div>
-          <h3>deployed</h3>
-          <p>{weather}</p>
+          <p>{temp}</p>
+          <p>{desc}</p>
+          <p>{wind}</p>
+          <p>{fore}</p>
       </div>
   );
 }
