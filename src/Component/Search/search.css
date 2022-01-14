@@ -1,0 +1,11 @@
+.search button {
+  padding: 8px;
+  margin:4px;
+  background-color:rgb(255, 245, 157);
+  font-size: 16px;
+}
+
+.search input {
+    padding:8px;
+    margin:4px;
+}

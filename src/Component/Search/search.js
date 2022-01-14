@@ -1,11 +1,13 @@
 import React from "react";
+import "./search.css"
 
 function Search() {
-    return (
-        <div>
-            <h3>3rd attemps</h3>
-        </div>
-    );
+  return (
+    <div className="search">
+      <input></input>
+      <button>Search</button>
+    </div>
+  );
 }
 
 export default Search;
